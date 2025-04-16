@@ -13,10 +13,14 @@ export default function Home() {
           <Link href="#skills" className="text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-flicker">SKILLS</Link>
           <Link href="#projects" className="text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-shake">PROJECTS</Link>
         </div>
-
-        <div className="border-2 border-white rounded-full bg-transparent flex justify-center items-center m-5 text-xs p-2 whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
-          <Link href="#contact">CONTACT ME</Link>
-        </div>
+        <section className="contact flex">
+          <div className="border-2 border-white rounded-full bg-transparent flex justify-center items-center m-5 text-xs p-2 whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
+            <Link href="#contact">CONTACT ME</Link>
+          </div>
+          <div className="border-2 border-white rounded-full bg-transparent flex justify-center items-center m-5 text-xs p-2 whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
+            <Link href="/images/CVjobDating.pdf">CV</Link>
+          </div>
+        </section>
       </header>
 
       <div id="aboutMe" className="aboutMe flex items-center justify-center h-screen text-center p-20">
@@ -26,9 +30,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center ml-10 w-120">
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 text-xl">Salut !</p>
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 text-xl">Salut !</p>
           <p className="text-white max-w-2xl">
-            {`Moi, c'est`} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">Anh Hiep NGUYEN</span>, étudiant en première année de DNMADE Numérique. Passionné par le développement web, je jongle entre le code, la danse et les sessions de sport, que ce soit en salle ou en pleine nature. Fan de jeux vidéo et de musique, j’aime créer autant que découvrir de nouvelles expériences !
+            {`Moi, c'est`} <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-500 to-purple-500">Anh Hiep NGUYEN</span>, étudiant en première année de DNMADE Numérique. Passionné par le développement web, je jongle entre le code, la danse et les sessions de sport, que ce soit en salle ou en pleine nature. Fan de jeux vidéo et de musique, j’aime créer autant que découvrir de nouvelles expériences !
           </p>
         </div>
       </div>
