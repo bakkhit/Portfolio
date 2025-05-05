@@ -51,7 +51,9 @@ html{
 @media (max-width: 758px) {
   .khitAM{
     justify-self: center;
-    width: 50%;
+    height: 50vh;
+    width: auto
+    ;
   }
   .textAM{
     position: absolute;

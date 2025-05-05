@@ -3,8 +3,8 @@ import Link from "next/link"
 
 export default function AboutMe() {
     return (
-        <div className="aboutMe flex items-center justify-center text-center h-screen">
-            <div className="relative w-150 overflow-hidden">
+        <div  id="aboutMe" className="aboutMe flex items-center justify-center text-center h-[110vh]">
+            <div className="relative w-100 overflow-hidden">
                 <Image width={100} height={100} src="/images/khit.png" alt="khit" className="khitAM w-full" />
                 <div className="absolute bottom-0 left-0 w-full h-100 bg-gradient-to-t from-black to-transparent"></div>
             </div>
