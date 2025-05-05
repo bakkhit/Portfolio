@@ -49,4 +49,12 @@ html{
 }
 
 @media (max-width: 758px) {
+  .khitAM{
+    justify-self: center;
+    width: 50%;
+  }
+  .textAM{
+    position: absolute;
+    width: 50%;
+  }
 }
