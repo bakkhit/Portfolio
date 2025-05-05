@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Projects() {
     return (
         <div id="projects" className="flex flex-col items-center justify-center h-[110vh] w-full bg-black justify-self-center">
-            <h1 className="text-[5vw] font-bold mb-12 text-white">Projects</h1>
+            <h1 className="text-[2.5vw] font-bold mb-12 text-white">Projects</h1>
             <div className="flex flex-wrap justify-center gap-8 rounded-lg w-[80vw]">
                 <Link href="https://super-simon-v1.vercel.app" target="_blank" className="w-[20vw] h-[15vw] bg-black flex justify-center items-center rounded-lg text-white text-xl group relative overflow-hidden border-2 border-white">
                     <Image width={100} height={100} src="/images/SuperSimon.png" alt="Super Simon" className="w-[90%]" />
