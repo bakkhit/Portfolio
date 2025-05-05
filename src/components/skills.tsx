@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Images from "../components/images"
 
 export default function Skills() {
     return (
@@ -8,23 +8,23 @@ export default function Skills() {
                 <h2 className="text-[1.5vw] mb-4 justify-self-center text-white">Langages & Frontend :</h2>
                 <div className="flex justify-center gap-[3vw] flex-wrap">
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconHtml.png" alt="HTML" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconHtml.png" alt="HTML" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">HTML</p>
                     </div>
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconCss.png" alt="CSS" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconCss.png" alt="CSS" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">CSS</p>
                     </div>
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconJs.png" alt="JavaScript" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconJs.png" alt="JavaScript" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">JavaScript</p>
                     </div>
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconVueJs.png" alt="Vue.js" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconVueJs.png" alt="Vue.js" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">Vue.js</p>
                     </div>
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconReact.png" alt="React" className="w-[98%] object-cover" />
+                        <Images width={100} height={100} src="/images/iconReact.png" alt="React" className="w-[98%] object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">React</p>
                     </div>
                 </div>
@@ -34,11 +34,11 @@ export default function Skills() {
                 <h2 className="text-[1.5vw] mb-4 justify-self-center text-white">Outils & Méthodologies :</h2>
                 <div className="flex justify-center gap-[3vw] flex-wrap">
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconGitHub.png" alt="Git" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconGitHub.png" alt="Git" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">Git</p>
                     </div>
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconFigma.png" alt="Figma" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconFigma.png" alt="Figma" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">Figma</p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ export default function Skills() {
                 <h2 className="text-[1.5vw] mb-4 justify-self-center text-white">Backend :</h2>
                 <div className="flex justify-center gap-[3vw] flex-wrap">
                     <div className="w-[7vw] h-[7vw] bg-white p-4 flex justify-center items-center rounded-xl group relative overflow-hidden">
-                        <Image width={100} height={100} src="/images/iconNodeJs.svg" alt="Node.js" className="w-full h-full object-cover" />
+                        <Images width={100} height={100} src="/images/iconNodeJs.svg" alt="Node.js" className="w-full h-full object-cover" />
                         <p className="absolute bottom-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">Node.js</p>
                     </div>
                 </div>
