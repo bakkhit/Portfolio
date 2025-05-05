@@ -1,4 +1,4 @@
-import Images from "../components/images"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Header() {
@@ -6,7 +6,8 @@ export default function Header() {
         <header className="flex w-full h-[10vw] items-center px-[2vw] bg-linear-to-b from-black via-black to-transparent top-0 sticky z-50 text-[1vw] font-bold">
             <div className="flex w-[20%] justify-start">
                 <Link href="/" className="w-[100vw]">
-                    <Images
+                    <Image
+                        layout="responsive"
                         width={100}
                         height={100}
                         src="/images/logoAHNwhite.png"

@@ -1,11 +1,11 @@
-import Images from "../components/images"
+import Image from "next/image"
 
 export default function AboutMe() {
     return (
         <div  id="aboutMe" className="aboutMe flex items-center justify-center text-center h-[110vh]">
             <div className="relative w-100 overflow-hidden">
-                <Images width={100} height={100} src="/images/khit.png" alt="khit" className="khitAM w-full" />
-                <div className="absolute bottom-0 left-0 w-full h-[25vh] bg-gradient-to-t from-black via-black to-transparent"></div>
+                <Image layout="responsive" width={100} height={100} src="/images/khit.png" alt="khit" className="khitAM w-full" />
+                <div className="absolute bottom-0 left-0 w-full h-100 bg-gradient-to-t from-black to-transparent"></div>
             </div>
 
             <div className="textAM flex flex-col items-center justify-center w-[50vw] h-fit">
