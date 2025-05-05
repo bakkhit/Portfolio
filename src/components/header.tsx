@@ -7,12 +7,11 @@ export default function Header() {
             <div className="flex w-[20%] justify-start">
                 <Link href="/" className="w-[100vw]">
                     <Image
-                        layout="responsive"
                         width={100}
                         height={100}
                         src="/images/logoAHNwhite.png"
                         alt="Profile Picture"
-                        className="rounded-full hover:scale-120 transition duration-500 w-[8vw]"
+                        className="hover:scale-120 transition duration-500 w-[8vw]"
                     />
                 </Link>
             </div>

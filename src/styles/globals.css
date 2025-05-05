@@ -51,12 +51,20 @@ html{
 @media (max-width: 758px) {
   .khitAM{
     justify-self: center;
-    height: 50vh;
-    width: auto
-    ;
+    width: 50vw;
   }
   .textAM{
     position: absolute;
     width: 50%;
+    transform: translateY(-50%);
+  }
+  .salut{
+    font-size: 2vw;
+  }
+  .textAm{
+    font-size: 1.5vw;
+  }
+  .textAm2{
+    font-size: 1.5vw;
   }
 }
