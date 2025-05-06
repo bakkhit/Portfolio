@@ -42,7 +42,7 @@ export default function Header() {
                     <Link href="#contact">CONTACT ME</Link>
                 </div>
                 <div className="border-[0.2vw] border-white rounded-full bg-transparent flex justify-center items-center p-[0.5vw] whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
-                    <Link href="/images/khitCV.pdf">CV</Link>
+                    <Link href="/images/khitCV.pdf" target="blank">CV</Link>
                 </div>
             </section>
         </header>
