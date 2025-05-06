@@ -5,7 +5,7 @@ export default function AboutMe() {
         <div  id="aboutMe" className="aboutMe flex items-center justify-center text-center h-[110vh]">
             <div className="relative w-150 overflow-hidden">
                 <Image layout="responsive" width={100} height={100} src="/images/khit.png" alt="khit" className="khitAM" />
-                <div className="absolute bottom-0 left-0 w-full h-100 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="khitShadow absolute bottom-0 left-0 w-full h-100 bg-gradient-to-t from-black to-transparent"></div>
             </div>
 
             <div className="textAM flex flex-col items-center justify-center w-[50vw] h-fit">
