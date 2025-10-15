@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 
 export default function Maintenance() {
   const [show, setShow] = useState(true)
@@ -12,7 +12,7 @@ export default function Maintenance() {
       const params = new URLSearchParams(window.location.search)
       const forceHide = params.get('maintenance') === '0'
       if (forceHide) setShow(false)
-    } catch (e) {
+    } catch {
       // ignore (SSR safe)
     }
   }, [])
@@ -36,13 +36,17 @@ export default function Maintenance() {
       return () => body.classList.remove('maintenance-active')
     }, [show])
 
-    // cursor halo
-    const [cursor, setCursor] = useState({ x: -9999, y: -9999 })
+    // cursor halo: update CSS variables on the root div using a ref (avoids any typing)
+    const rootRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
       if (typeof window === 'undefined') return
       const onMove = (e: PointerEvent) => {
-        setCursor({ x: e.clientX, y: e.clientY })
+        const el = rootRef.current
+        if (el) {
+          el.style.setProperty('--cx', `${e.clientX}px`)
+          el.style.setProperty('--cy', `${e.clientY}px`)
+        }
       }
       window.addEventListener('pointermove', onMove)
       return () => window.removeEventListener('pointermove', onMove)
@@ -50,11 +54,8 @@ export default function Maintenance() {
 
   if (!show) return null
 
-  // set CSS variables on the root element so the ::before mask can use them
-  const rootStyle: React.CSSProperties = ({ ['--cx' as any]: `${cursor.x}px`, ['--cy' as any]: `${cursor.y}px` })
-
   return (
-    <div className="maintenance-root" style={rootStyle}>
+    <div ref={rootRef} className="maintenance-root">
       <div className={`maintenance-card ${exiting ? 'maintenance-exit' : 'maintenance-animate-in'}`}>
         <h1 className="maintenance-title">EN MAINTENANCE</h1>
         <p className="maintenance-text">Je travaille sur une refonte du site. Revenez bientôt.</p>
