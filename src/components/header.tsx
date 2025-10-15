@@ -16,32 +16,32 @@ export default function Header() {
                 </Link>
             </div>
 
-            <section className="flex w-[60%] justify-center h-fit text-[1vw] gap-[2vw]">
+            <section className="headerLink flex w-[60%] h-fit text-[1vw] gap-[1vw] place-content-between">
                 <Link
                     href="#aboutMe"
-                    className="text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-wiggle"
+                    className="aboutMeText text-center  text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-wiggle"
                 >
                     ABOUT ME
                 </Link>
                 <Link
                     href="#skills"
-                    className="text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-flicker"
+                    className="skillsText text-center text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-flicker"
                 >
                     SKILLS
                 </Link>
                 <Link
                     href="#projects"
-                    className="text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-shake"
+                    className="projectsText text-center text-white hover:text-gray-500 transition duration-500 hover:scale-110 hover:animate-shake"
                 >
                     PROJECTS
                 </Link>
             </section>
 
-            <section className="flex w-[20%] justify-end text-[1vw] gap-[0.5vw] h-fit">
-                <div className="border-[0.2vw] border-white rounded-full bg-transparent flex justify-center items-center p-[0.5vw] whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
+            <section className="headerContact flex w-[20%] place-content-end text-[1vw] gap-[0.5vw] h-fit">
+                <div className="contactText border-[0.2vw] border-white rounded-full bg-transparent flex justify-center items-center p-[0.5vw] whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
                     <Link href="#contact">CONTACT ME</Link>
                 </div>
-                <div className="border-[0.2vw] border-white rounded-full bg-transparent flex justify-center items-center p-[0.5vw] whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
+                <div className="cvText border-[0.2vw] border-white rounded-full bg-transparent flex justify-center items-center p-[0.5vw] whitespace-nowrap hover:bg-white hover:text-black transition-colors duration-500 text-white">
                     <Link href="/images/khitCV.pdf" target="blank">CV</Link>
                 </div>
             </section>
