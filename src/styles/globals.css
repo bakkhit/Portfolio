@@ -251,3 +251,166 @@ html {
     font-size: 1.5vw;
   }
 }
+
+  /* Maintenance screen styles */
+  .maintenance-root {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.95);
+    z-index: 9999;
+    padding: 2rem;
+    /* strong backdrop blur to exaggerate effect */
+    backdrop-filter: blur(6px) saturate(1.05);
+  }
+
+  .maintenance-card {
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    /* transparent background so no rectangle behind text */
+    background: transparent;
+  }
+
+  .maintenance-title {
+    font-size: 3.5rem;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.08em;
+  }
+
+  .maintenance-text {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    color: #d1d5db;
+  }
+
+  .maintenance-enter {
+    background: white;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  @media (max-width: 640px) {
+    .maintenance-card {
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .maintenance-title {
+      font-size: 6vw;
+    }
+
+    .maintenance-text {
+      font-size: 3.5vw;
+    }
+
+    .maintenance-enter {
+      width: 100%;
+      padding: 0.75rem;
+    }
+  }
+
+  /* Entrance animation for maintenance card */
+  @keyframes maintenanceIn {
+    0% {
+      opacity: 0;
+      transform: translateY(12px) scale(0.995);
+    }
+
+    60% {
+      opacity: 1;
+      transform: translateY(-6px) scale(1.005);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .maintenance-animate-in {
+    animation: maintenanceIn 650ms cubic-bezier(.22,.9,.37,1) both;
+  }
+
+  /* Slow pulse for the enter button */
+  @keyframes slowPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.0); }
+    50% { transform: scale(1.03); box-shadow: 0 8px 24px 0 rgba(255,255,255,0.04); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.0); }
+  }
+
+  .maintenance-pulse {
+    animation: slowPulse 2500ms ease-in-out infinite;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+
+  .maintenance-enter:hover {
+    /* speed up the pulse slightly on hover */
+    animation-duration: 1400ms !important;
+  }
+
+  /* localized rim-less blur using ::before; center controlled with --cx and --cy CSS vars set from React */
+  .maintenance-root::before {
+    content: '';
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 10001;
+    /* larger mask radius and stronger center blur; stops tuned to avoid any visible rim */
+    --mask-radius: 300px;
+    -webkit-mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 12%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.28) 48%, rgba(0,0,0,0.08) 72%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 12%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.28) 48%, rgba(0,0,0,0.08) 72%, rgba(0,0,0,0) 100%);
+    /* stronger concentrated blur under the masked area */
+    backdrop-filter: blur(64px) saturate(1.06);
+    /* subtle tint to enhance blur visibility */
+    background: rgba(255,255,255,0.015);
+    will-change: transform, opacity;
+  }
+
+  @media (max-width: 640px) {
+    .maintenance-root::before {
+      --mask-radius: 200px;
+      -webkit-mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.86) 14%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.08) 76%, rgba(0,0,0,0) 100%);
+      mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.86) 14%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.08) 76%, rgba(0,0,0,0) 100%);
+      backdrop-filter: blur(52px) saturate(1.04);
+    }
+  }
+
+  .maintenance-pulse:active,
+  .maintenance-pulse:focus {
+    transform: scale(0.995) !important;
+    outline: none;
+  }
+
+  /* When maintenance overlay is active, lock scroll and touch interactions */
+  body.maintenance-active {
+    overflow: hidden !important;
+    touch-action: none !important;
+    -webkit-overflow-scrolling: auto !important;
+  }
+
+  /* Exit animation */
+  @keyframes maintenanceOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(6px) scale(0.995);
+    }
+  }
+
+  .maintenance-exit {
+    animation: maintenanceOut 420ms cubic-bezier(.22,.9,.37,1) both;
+  }
