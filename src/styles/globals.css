@@ -369,10 +369,6 @@ html {
     --mask-radius: 300px;
     -webkit-mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 12%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.28) 48%, rgba(0,0,0,0.08) 72%, rgba(0,0,0,0) 100%);
     mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 12%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.28) 48%, rgba(0,0,0,0.08) 72%, rgba(0,0,0,0) 100%);
-    /* stronger concentrated blur under the masked area */
-    backdrop-filter: blur(64px) saturate(1.06);
-    /* subtle tint to enhance blur visibility */
-    background: rgba(255,255,255,0.015);
     will-change: transform, opacity;
   }
 
@@ -381,7 +377,7 @@ html {
       --mask-radius: 200px;
       -webkit-mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.86) 14%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.08) 76%, rgba(0,0,0,0) 100%);
       mask-image: radial-gradient(circle var(--mask-radius) at var(--cx) var(--cy), rgba(0,0,0,1) 0%, rgba(0,0,0,0.86) 14%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.08) 76%, rgba(0,0,0,0) 100%);
-      backdrop-filter: blur(52px) saturate(1.04);
+      /* backdrop-filter: blur(52px) saturate(1.04); */
     }
   }
 

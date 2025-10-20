@@ -57,8 +57,8 @@ export default function Maintenance() {
   return (
     <div ref={rootRef} className="maintenance-root">
       <div className={`maintenance-card ${exiting ? 'maintenance-exit' : 'maintenance-animate-in'}`}>
-        <h1 className="maintenance-title">EN MAINTENANCE</h1>
-        <p className="maintenance-text">Je travaille sur une refonte du site. Revenez bientôt.</p>
+        <h1 className="maintenance-title">EN TRAVAUX</h1>
+        <p className="maintenance-text">🚧Je travaille sur une refonte du site. Revenez bientôt.🚧</p>
         <div className="maintenance-actions">
           <button className="maintenance-enter maintenance-pulse" onClick={enter}>
             Entrer quand même
