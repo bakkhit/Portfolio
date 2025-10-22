@@ -6,7 +6,7 @@ export default function Contact() {
         <div id="contact" className="flex flex-col items-center justify-center bg-black text-white pb-10">
             <h1 className="text-[2.5vw] font-bold mb-[5vw]">Contact</h1>
 
-            <div className="flex justify-center gap-[10%] w-full max-w-4xl px-8">
+            <div className="flex justify-center gap-[5%] w-full max-w-4xl px-8 flex-wrap">
                 <Link href="tel:+33766254068" className="flex flex-col items-center group">
                     <div className="phoneImg w-[10vw] h-[10vw] bg-white flex justify-center items-center rounded-full transition-transform duration-300 hover:scale-105">
                         <Image width={100} height={100} src="/images/iconPhone.png" alt="Téléphone" className="object-cover w-[5vw]" />
@@ -37,6 +37,14 @@ export default function Contact() {
                     </div>
                     <p className="mailText mt-[1vw] text-[1vw] opacity-80 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-center">
                         ahnkhit@gmail.com
+                    </p>
+                </Link>
+                <Link href="https://github.com/bakkhit" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group">
+                    <div className="githubImg w-[10vw] h-[10vw] bg-white flex justify-center items-center rounded-full transition-transform duration-300 hover:scale-105">
+                        <Image width={100} height={100} src="/images/iconGitHub.png" alt="GitHub" className="object-cover w-[5vw]" />
+                    </div>
+                    <p className="githubText mt-[1vw] text-[1vw] opacity-80 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-center">
+                        bakkhit
                     </p>
                 </Link>
             </div>
