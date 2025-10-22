@@ -192,6 +192,76 @@ html {
     height: 18vw;
   }
 
+  .phoneImg {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .instagramImg {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .linkedinImg {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .mailImg {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .githubImg {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .phoneImg img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .instagramImg img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .linkedinImg img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .mailImg img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .githubImg img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .phoneNumber {
+    font-size: 3vw;
+  }
+
+  .instagramText {
+    font-size: 3vw;
+  }
+
+  .linkedinText {
+    font-size: 3vw;
+  }
+
+  .mailText {
+    font-size: 3vw;
+  }
+
+  .githubText {
+    font-size: 3vw;
+  }
+
   .njsSkills {
     width: 18vw;
     height: 18vw;
